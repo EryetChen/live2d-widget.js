@@ -370,18 +370,15 @@ cModel.prototype.startMotion = function(name, no, priority)
     {
         this.loadMotion(motionName, this.modelHomeDir + motionName, function(mtn) {
             motion = mtn;
-
-
-            thisRef.setFadeInFadeOut(name, no, priority, motion);
             
+            thisRef.startRandomMotion(name, priority)
         });
     }
     else
     {
         motion = this.motions[motionName];
 
-
-        thisRef.setFadeInFadeOut(name, no, priority, motion);
+        thisRef.startRandomMotion(name, priority)
     }
 }
 
