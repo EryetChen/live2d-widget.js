@@ -368,7 +368,7 @@ cModel.prototype.startMotion = function(name, no, priority)
 
     if (this.motions[motionName] == null)
     {
-        this.loadMotion(motionName, this.modelHomeDir + motionName, function(mtn) {
+        this.loadMotion(null, this.modelHomeDir + motionName, function(mtn) {
             motion = mtn;
 
 
